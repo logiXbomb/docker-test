@@ -5,7 +5,7 @@ deployment:
  dockerhub:
    branch: master
    commands:
-     - $DOCKER_HUB_TRIGGER
+     - curl -H "Content-Type:application/json" --data '{"build":true}' -X POST https://registry.hub.docker.com/u/slowie/docker-test/trigger/7f13d01b-3d20-42f8-9e6e-cce118054eae/
 
 test:
   override:
